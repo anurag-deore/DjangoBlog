@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/909143405246210048/YygF9NdQ.jpg"
+        type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" type="text/css" href="{ % static 'blog/main.css' %}"> -->
+
+    <title>Pehchaan | Login</title>
+    <style>
+        html {
+            width: 100%;
+            height: 100vh;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            /* font-family: 'Work sans', sans-serif; */
+            background: linear-gradient(57deg, #00C6A7, #1E4D92);
+            background-repeat: no-repeat;
+
+        }
+
+        .tabs {
+            font-weight: bolder;
+            font-size: larger;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            z-index: 1;
+            background-color: #e6eef7;
+        }
+
+        .tabs.active {
+            z-index: 2;
+            background-color: #fff;
+        }
+
+        .rowtop {
+            display: flex;
+            border: none;
+        }
+
+        .card-body {
+            z-index: 2;
+            background-color: #fff;
+        }
+
+        label {
+            font-size: 17px;
+            margin-top: 15px;
+        }
+
+        .form-control {
+            border-radius: 0;
+            padding: 20px;
+            line-height: 20px;
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, .1), 0 0 0 transparent;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .btn {
+            margin-top: 20px;
+            border-radius: 0;
+            border: none;
+            font-size: 17px;
+            color: #fff;
+            background-color: #3f76b4;
+        }
+
+        .btn:hover {
+            background-color: #1E4D92;
+            color: #fff;
+        }
+
+        .content {
+
+            margin: auto;
+        }
+
+        .card {
+            height: 60vh;
+            border: none;
+            width: 40vw;
+        }
+
+
+        @media only screen and (max-width: 992px) {
+            main {
+                align-items: unset;
+            }
+
+            .card {
+                height: 60vh;
+                width: 90vw;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            .card {
+                height: 75vh;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-light" style="height: 100vh;">
+    <main>
+        <div class="content">
+
+            <h2 class="text-center my-4 font-weight-bold text-light">Pehchaan</h2>
+            <div class="card shadow">
+                <div class="rowtop">
+                    <div id="logintab" class="tabs active shadow">Login</div>
+                    <div id="regtab" class="tabs">Register</div>
+                </div>
+                <div class="card-body formlog">
+                    <div class="">
+                        <label for="validationDefault01">First name</label>
+                        <input type="text" class="form-control" id="validationDefault01" required>
+                    </div>
+                    <div class="">
+                        <label for="validationDefault02">Last name</label>
+                        <input type="text" class="form-control" id="validationDefault02" required>
+                    </div>
+                    <div class="row my-3">
+                        <div class="col-6">
+                            <div class="form-check form-check-inline">
+                                <input class=" mx-2" type="checkbox" id="rememberme" value="option1">
+                                <label class="form-check-label mt-0" for="rememberme"> Remember Me </label>
+                            </div>
+                        </div>
+                        <div class="col-6 text-right">
+                            <a href="">Forgot Password?</a>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn float-right">Sign In</button>
+                </div>
+                <div class="card-body formreg d-none">
+                    <div class="">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" required>
+                    </div>
+                    <div class="">
+                        <label for="email">Email </label>
+                        <input type="text" class="form-control" id="email" required>
+                    </div>
+                    <div class="">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <button type="submit" class="btn float-right">Create Account</button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#logintab').click(function (e) {
+                e.preventDefault();
+                $('.formlog').removeClass('d-none');
+                $('.formreg').addClass('d-none');
+                $('#logintab').addClass('active').addClass('shadow');
+                $('#regtab').removeClass('active').removeClass('shadow');
+                $('title').html('Pehchaan | Login');
+            });
+            $('#regtab').click(function (e) {
+                e.preventDefault();
+                $('.formreg').removeClass('d-none');
+                $('.formlog').addClass('d-none');
+                $('#regtab').addClass('active').addClass('shadow');
+                $('#logintab').removeClass('active').removeClass('shadow');
+                $('title').html('Pehchaan | Register');
+            });
+        });
+    </script>
+</body>
+
+</html>
